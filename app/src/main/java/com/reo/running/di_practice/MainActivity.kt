@@ -3,8 +3,10 @@ package com.reo.running.di_practice
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import javax.inject.Inject
 
-class MainActivity(private var action: Action) : AppCompatActivity() {
+class MainActivity() : AppCompatActivity() {
+    @Inject lateinit var action: Action
     var km: Double = 0.0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
